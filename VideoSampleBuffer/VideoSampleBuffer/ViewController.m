@@ -2,7 +2,7 @@
 //  ViewController.m
 //  VideoSampleBuffer
 //
-//  Created by Apple on 2018/5/25.
+//  Created by  周家稳 on 2018/5/25.
 //  Copyright © 2018年 zhoujiawen. All rights reserved.
 //
 

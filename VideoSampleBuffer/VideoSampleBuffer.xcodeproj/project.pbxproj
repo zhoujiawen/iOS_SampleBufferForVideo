@@ -15,7 +15,6 @@
 		184D66D820B803A200689967 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D66D720B803A200689967 /* main.m */; };
 		184D66E220B803A200689967 /* VideoSampleBufferTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D66E120B803A200689967 /* VideoSampleBufferTests.m */; };
 		184D66ED20B803A200689967 /* VideoSampleBufferUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D66EC20B803A200689967 /* VideoSampleBufferUITests.m */; };
-		184D66FD20B8040400689967 /* SampleBufferVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D66FC20B8040400689967 /* SampleBufferVideo.m */; };
 		18BE1C7120BC02E600643F08 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18BE1C6B20BC02E500643F08 /* libavutil.a */; };
 		18BE1C7220BC02E600643F08 /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18BE1C6C20BC02E500643F08 /* libavfilter.a */; };
 		18BE1C7320BC02E600643F08 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18BE1C6D20BC02E500643F08 /* libavcodec.a */; };
@@ -25,6 +24,9 @@
 		18BE1C7920BC031700643F08 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 18BE1C7820BC031700643F08 /* libz.tbd */; };
 		18BE1C7B20BC032100643F08 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 18BE1C7A20BC032100643F08 /* libbz2.tbd */; };
 		18BE1C7D20BC032C00643F08 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 18BE1C7C20BC032C00643F08 /* libiconv.tbd */; };
+		18BE1D0B20BC078A00643F08 /* SampleBufferVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE1D0A20BC078A00643F08 /* SampleBufferVideo.m */; };
+		18BE1D0E20BC07C000643F08 /* RecoderEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE1D0D20BC07C000643F08 /* RecoderEngine.m */; };
+		18BE1D1620BC0A1200643F08 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE1D1420BC0A1200643F08 /* Common.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,8 +63,6 @@
 		184D66E820B803A200689967 /* VideoSampleBufferUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoSampleBufferUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		184D66EC20B803A200689967 /* VideoSampleBufferUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoSampleBufferUITests.m; sourceTree = "<group>"; };
 		184D66EE20B803A200689967 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		184D66FB20B8040400689967 /* SampleBufferVideo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SampleBufferVideo.h; sourceTree = "<group>"; };
-		184D66FC20B8040400689967 /* SampleBufferVideo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleBufferVideo.m; sourceTree = "<group>"; };
 		18BE1BF920BC02E500643F08 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
 		18BE1BFA20BC02E500643F08 /* buffersrc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buffersrc.h; sourceTree = "<group>"; };
 		18BE1BFB20BC02E500643F08 /* buffersink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buffersink.h; sourceTree = "<group>"; };
@@ -180,6 +180,12 @@
 		18BE1C7820BC031700643F08 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		18BE1C7A20BC032100643F08 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		18BE1C7C20BC032C00643F08 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		18BE1D0920BC078A00643F08 /* SampleBufferVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleBufferVideo.h; sourceTree = "<group>"; };
+		18BE1D0A20BC078A00643F08 /* SampleBufferVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleBufferVideo.m; sourceTree = "<group>"; };
+		18BE1D0C20BC07C000643F08 /* RecoderEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecoderEngine.h; sourceTree = "<group>"; };
+		18BE1D0D20BC07C000643F08 /* RecoderEngine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecoderEngine.m; sourceTree = "<group>"; };
+		18BE1D1420BC0A1200643F08 /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
+		18BE1D1520BC0A1200643F08 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +246,7 @@
 		184D66C720B8039E00689967 /* VideoSampleBuffer */ = {
 			isa = PBXGroup;
 			children = (
+				18BE1D1320BC0A1200643F08 /* Common */,
 				18BE1BF620BC02E500643F08 /* FFmpeg */,
 				184D66FA20B803B400689967 /* VideoEngine */,
 				184D66C820B8039F00689967 /* AppDelegate.h */,
@@ -276,8 +283,8 @@
 		184D66FA20B803B400689967 /* VideoEngine */ = {
 			isa = PBXGroup;
 			children = (
-				184D66FB20B8040400689967 /* SampleBufferVideo.h */,
-				184D66FC20B8040400689967 /* SampleBufferVideo.m */,
+				18BE1D0820BC078A00643F08 /* GetSampleBuffer */,
+				18BE1D0720BC078A00643F08 /* VideoRecorder */,
 			);
 			path = VideoEngine;
 			sourceTree = "<group>";
@@ -477,6 +484,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		18BE1D0720BC078A00643F08 /* VideoRecorder */ = {
+			isa = PBXGroup;
+			children = (
+				18BE1D0C20BC07C000643F08 /* RecoderEngine.h */,
+				18BE1D0D20BC07C000643F08 /* RecoderEngine.m */,
+			);
+			path = VideoRecorder;
+			sourceTree = "<group>";
+		};
+		18BE1D0820BC078A00643F08 /* GetSampleBuffer */ = {
+			isa = PBXGroup;
+			children = (
+				18BE1D0920BC078A00643F08 /* SampleBufferVideo.h */,
+				18BE1D0A20BC078A00643F08 /* SampleBufferVideo.m */,
+			);
+			path = GetSampleBuffer;
+			sourceTree = "<group>";
+		};
+		18BE1D1320BC0A1200643F08 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				18BE1D1520BC0A1200643F08 /* Common.h */,
+				18BE1D1420BC0A1200643F08 /* Common.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -608,9 +642,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				184D66CD20B8039F00689967 /* ViewController.m in Sources */,
-				184D66FD20B8040400689967 /* SampleBufferVideo.m in Sources */,
+				18BE1D0E20BC07C000643F08 /* RecoderEngine.m in Sources */,
 				184D66D820B803A200689967 /* main.m in Sources */,
 				184D66CA20B8039F00689967 /* AppDelegate.m in Sources */,
+				18BE1D0B20BC078A00643F08 /* SampleBufferVideo.m in Sources */,
+				18BE1D1620BC0A1200643F08 /* Common.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

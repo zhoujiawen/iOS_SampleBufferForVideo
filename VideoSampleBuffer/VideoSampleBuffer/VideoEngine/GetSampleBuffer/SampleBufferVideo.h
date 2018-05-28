@@ -18,6 +18,9 @@
 @end
 @interface SampleBufferVideo : NSObject
 @property (weak, nonatomic) id<SampleBufferVideoDelegate> delegate;
+
+
+
 //开始
 -(void)startRuning;
 //停止
@@ -32,4 +35,8 @@
 - (void)swichCameraInputDeviceToFront:(BOOL)isFront;
 //捕获到的视频呈现的layer
 - (AVCaptureVideoPreviewLayer *)previewLayer;
+
+
+
+
 @end
