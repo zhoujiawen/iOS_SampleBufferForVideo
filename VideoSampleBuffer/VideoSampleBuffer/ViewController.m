@@ -20,8 +20,10 @@
     // Do any additional setup after loading the view, typically from a nib.
     SampleBufferVideo *video = [[SampleBufferVideo alloc] init];
     [video startRuning];
-    [video previewLayer].frame = CGRectMake(0,0,[[UIScreen mainScreen] bounds].size.width,[[UIScreen mainScreen] bounds].size.height);
-    [self.view.layer insertSublayer:[video previewLayer] atIndex:0];
+    AVCaptureVideoPreviewLayer *videolayer = [video previewLayer];
+    videolayer.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/2-50,[UIScreen mainScreen].bounds.size.height/2-50,100,100);
+    videolayer.cornerRadius = 50;
+    [self.view.layer insertSublayer:videolayer atIndex:0];
 }
 
 
