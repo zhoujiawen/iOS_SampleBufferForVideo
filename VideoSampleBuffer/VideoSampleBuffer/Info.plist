@@ -45,5 +45,7 @@
 	<string>App需要您的同意,才能使用摄像头进行视频通话功能,实时视频功能.志愿者才能通过视频了解实时情况</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>App需要您的同意,才能使用麦克风,视频通话和语音输入功能才能正常使用</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>是否允许APP将视频存储到相册里</string>
 </dict>
 </plist>

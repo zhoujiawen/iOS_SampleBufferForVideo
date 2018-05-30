@@ -263,10 +263,22 @@
  格式信息: 除了原始媒体样本外,CMSampleBuffer还提供了以CMFormatDescription对象的形式存在的样本格式信息. 它定义了大量函数用于访问媒体样本的更多细节. 例如: 识别音频和视频数据.
  时间信息: CMSampleBuffer还定义了关于媒体样本的时间信息,可以获取到原始的表示时间戳和解码时间戳.
  附加的元数据 : Core Media在CMAttachment.h中定义了元数据协议,可以读取和写入底层元数据.比如可交换图片文件格式的标签.
+ 
+ captureOutput:didOutputSampleBuffer:fromConnection:
+ 当输出捕获并输出一个新的视频帧、解码或重新编码它的视频设置属性指定的时候，委托将接收此消息。委托可以与其他api一起使用提供的视频框架进行进一步的处理。
+ 此方法在输出的sampleBufferCallbackQueue属性指定的分派队列上调用。它是周期性的，因此必须有效地防止捕获性能问题，包括已删除的帧。
+ 如果您需要在这个方法的范围之外引用CMSampleBuffer对象，那么您必须将它保存起来，然后在您完成它时将它CFRelease。
+ 为了保持最佳性能，一些示例缓冲区直接引用可能需要被设备系统和其他捕获输入重用的内存池。这常常是未压缩设备本地捕获的情况，在这里，内存块的复制尽可能少。如果多个样本缓冲区对这样的内存池进行了太长时间的引用，输入将不再能够将新的样本复制到内存中，并且这些样本将被删除。
+ 如果您的应用程序从而丢弃样品提供CMSampleBufferRef对象保留太久,但它需要对样本数据的访问很长一段时间,考虑将数据复制到新的缓冲区,然后释放样品缓冲(如果是以前留存),这样可以重用它引用的内存。
+ 
+ 
+ 
  */
 //捕获到视频的回调函数 每当获取一个新的视频帧就会调用,数据在其中进行解码或重新编码
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection {
+     CFRetain(sampleBuffer);
     [self.delegate captureOutput:captureOutput didOutputSampleBuffer:sampleBuffer fromConnection:connection];
+    CFRelease(sampleBuffer);
 }
 
 /*
@@ -275,6 +287,7 @@
 //每当一个迟到的帧被丢弃时调用
 - (void)captureOutput:(AVCaptureOutput *)output didDropSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection{
     [self.delegate captureOutput:output didDropSampleBuffer:sampleBuffer fromConnection:connection];
+    
 }
 
 #pragma mark 初始化  创建单利

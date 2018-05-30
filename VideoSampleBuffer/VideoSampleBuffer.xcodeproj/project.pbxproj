@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18457C3920BCEEFF009A16E3 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 18457C3720BCEEFE009A16E3 /* Student.m */; };
 		184D66CA20B8039F00689967 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D66C920B8039F00689967 /* AppDelegate.m */; };
 		184D66CD20B8039F00689967 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D66CC20B8039F00689967 /* ViewController.m */; };
 		184D66D020B8039F00689967 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184D66CE20B8039F00689967 /* Main.storyboard */; };
@@ -47,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18457C3720BCEEFE009A16E3 /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		18457C3820BCEEFE009A16E3 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
 		184D66C520B8039E00689967 /* VideoSampleBuffer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoSampleBuffer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		184D66C820B8039F00689967 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		184D66C920B8039F00689967 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -505,6 +508,8 @@
 		18BE1D1320BC0A1200643F08 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				18457C3820BCEEFE009A16E3 /* Student.h */,
+				18457C3720BCEEFE009A16E3 /* Student.m */,
 				18BE1D1520BC0A1200643F08 /* Common.h */,
 				18BE1D1420BC0A1200643F08 /* Common.m */,
 			);
@@ -645,6 +650,7 @@
 				18BE1D0E20BC07C000643F08 /* RecoderEngine.m in Sources */,
 				184D66D820B803A200689967 /* main.m in Sources */,
 				184D66CA20B8039F00689967 /* AppDelegate.m in Sources */,
+				18457C3920BCEEFF009A16E3 /* Student.m in Sources */,
 				18BE1D0B20BC078A00643F08 /* SampleBufferVideo.m in Sources */,
 				18BE1D1620BC0A1200643F08 /* Common.m in Sources */,
 			);
